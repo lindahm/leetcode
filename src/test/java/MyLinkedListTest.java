@@ -1,5 +1,6 @@
-import org.home.leetcode.hashmapset.*;
+import org.home.linkedlist.ListNode;
 import org.home.linkedlist.MyLinkedList;
+import org.home.linkedlist.RemoveNthElementFromEnd;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -28,6 +29,20 @@ public class MyLinkedListTest {
         System.out.println(list);
         Assertions.assertEquals(-1, list.get(0));
 
+    }
+
+    @Test
+    public void removeNthElementFromEnd() {
+    ListNode head = new ListNode(1);
+        ListNode node1 = new ListNode(2);
+        head.next = node1;
+        RemoveNthElementFromEnd.removeNthFromEnd(head, 1);
+
+        ListNode node = head;
+        while (node != null) {
+            System.out.println(node.val);
+            node = node.next;
+        }
     }
 
 }
